@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import akshay.saurav.chandan.exploreyourplaces.R;
+import akshay.saurav.chandan.exploreyourplace.R;
 
 public class MyAdaptor extends BaseAdapter {
 

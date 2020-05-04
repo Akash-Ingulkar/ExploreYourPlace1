@@ -24,9 +24,9 @@ import androidx.fragment.app.Fragment;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import akshay.saurav.chandan.exploreyourplaces.MainActivity;
-import akshay.saurav.chandan.exploreyourplaces.R;
-import akshay.saurav.chandan.exploreyourplaces.model.PostMyProperty;
+import akshay.saurav.chandan.exploreyourplace.MainActivity;
+import akshay.saurav.chandan.exploreyourplace.R;
+import akshay.saurav.chandan.exploreyourplace.model.PostMyProperty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

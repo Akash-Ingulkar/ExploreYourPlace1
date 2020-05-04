@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import akshay.saurav.chandan.exploreyourplaces.R;
+import akshay.saurav.chandan.exploreyourplace.R;
 
 class Payment extends AppCompatActivity {
 

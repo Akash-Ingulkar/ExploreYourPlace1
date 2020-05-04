@@ -16,13 +16,13 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import akshay.saurav.chandan.exploreyourplaces.R;
-import akshay.saurav.chandan.exploreyourplaces.adapters.CategoryAdapter;
-import akshay.saurav.chandan.exploreyourplaces.constants.Constant;
-import akshay.saurav.chandan.exploreyourplaces.model.CategoryList;
-import akshay.saurav.chandan.exploreyourplaces.model.PMenu;
-import akshay.saurav.chandan.exploreyourplaces.services.RetrofitClient;
-import akshay.saurav.chandan.exploreyourplaces.services.ServiceApiPMenu;
+import akshay.saurav.chandan.exploreyourplace.R;
+import akshay.saurav.chandan.exploreyourplace.adapters.CategoryAdapter;
+import akshay.saurav.chandan.exploreyourplace.constants.Constant;
+import akshay.saurav.chandan.exploreyourplace.model.CategoryList;
+import akshay.saurav.chandan.exploreyourplace.model.PMenu;
+import akshay.saurav.chandan.exploreyourplace.services.RetrofitClient;
+import akshay.saurav.chandan.exploreyourplace.services.ServiceApiPMenu;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

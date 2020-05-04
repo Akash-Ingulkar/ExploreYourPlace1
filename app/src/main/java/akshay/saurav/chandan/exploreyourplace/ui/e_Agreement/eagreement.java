@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-import akshay.saurav.chandan.exploreyourplaces.R;
+import akshay.saurav.chandan.exploreyourplace.R;
 
 
 public class eagreement extends Fragment {

@@ -13,9 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import akshay.saurav.chandan.exploreyourplaces.MainActivity;
-import akshay.saurav.chandan.exploreyourplaces.R;
-import akshay.saurav.chandan.exploreyourplaces.model.PamData;
+import akshay.saurav.chandan.exploreyourplace.MainActivity;
+import akshay.saurav.chandan.exploreyourplace.R;
+import akshay.saurav.chandan.exploreyourplace.model.PamData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

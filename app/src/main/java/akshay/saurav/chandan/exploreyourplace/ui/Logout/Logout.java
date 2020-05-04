@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import akshay.saurav.chandan.exploreyourplaces.services.MyInterface;
+import akshay.saurav.chandan.exploreyourplace.services.MyInterface;
 
 public class Logout extends Fragment {
     @Nullable
