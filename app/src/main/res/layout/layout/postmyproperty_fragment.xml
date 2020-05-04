@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#C0C0C0">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Post Your Property"
+        android:textColor="#044E47"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="35sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/client_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Property Type"
+            android:padding="10dp"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/client_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+            android:background="@drawable/corner1"
+            android:hint="  Select" />
+
+        <TextView
+            android:id="@+id/client_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expected Price"
+            android:padding="10dp"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/client_phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+
+            android:background="@drawable/corner1"
+
+            android:hint="  Add Price" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:padding="10dp"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/city_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+
+            android:background="@drawable/corner1"
+            android:hint="  Enter Location"
+            />
+
+        <TextView
+            android:id="@+id/moving_From"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Property Description"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/moving_from_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+            android:background="@drawable/corner1"
+
+            android:hint="  Add Description" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Mmving_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Property Photo"
+                android:padding="10dp"
+                android:textColor="#044E47"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/corner1"
+                android:textAllCaps="false"
+                android:text="Browse" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+           >
+
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/corner1"
+                android:layout_weight="1"
+                android:text="Upload" />
+        </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:gravity="center"
+    >
+
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:background="@drawable/corner1"
+        android:text="Submit" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#044E47"
+        android:padding="5dp"
+        android:gravity="center"
+        >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/corner1"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="RK" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner1"
+            android:layout_gravity="bottom"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:text="BHK" />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp">
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner1"
+            android:layout_gravity="bottom"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:text="Cot Basis" />
+            </LinearLayout>
+        <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner1"
+            android:layout_gravity="bottom"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:text="Bunglow" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

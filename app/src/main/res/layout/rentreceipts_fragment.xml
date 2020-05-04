@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#C0C0C0">
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Rent Receipt"
+        android:textColor="#044E47"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="35sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/crr_tenentname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenant's Name"
+            android:padding="10dp"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/crr_edtenentname"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+            android:background="@drawable/corner1"
+            android:hint="  Enter Tenant's Name" />
+
+        <TextView
+            android:id="@+id/crr_ownername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owner's Name"
+            android:padding="10dp"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/crr_edownername"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+            android:background="@drawable/corner1"
+            android:hint="  Enter Owner's Name"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/crr_tenphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenant's Phone"
+            android:padding="10dp"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/crr_edtenphone"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+            android:background="@drawable/corner1"
+            android:hint="  Enter Tenant's Phone"
+            />
+
+        <TextView
+            android:id="@+id/crr_ownerphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Owner's Phone"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/crr_edownerphone"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+            android:background="@drawable/corner1"
+            android:hint="  Enter Owner's Phone" />
+
+        <TextView
+            android:id="@+id/crr_rent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rent"
+            android:padding="10dp"
+            android:textColor="#044E47"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/crr_edrent"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColorHint="#044E47"
+            android:background="@drawable/corner1"
+            android:hint="  Enter Amount in Rupees" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/crr_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+            android:background="#044E47"
+            android:textSize="20dp"
+            android:textColor="#FFEB3B"
+            android:text="Generate Rent Receipt" />
+    </LinearLayout>
+
+
+</LinearLayout>
