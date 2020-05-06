@@ -139,4 +139,5 @@ public class HomeFragment extends Fragment implements BaseSliderView.OnSliderCli
     public void onPageScrollStateChanged(int state) {
 
     }
+
 }

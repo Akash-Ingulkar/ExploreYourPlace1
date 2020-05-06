@@ -14,12 +14,18 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".CotBasis"/>
-        <activity android:name=".Bunglow" />
-        <activity android:name=".RK" />
-        <activity android:name=".BHK" />
-        <activity android:name=".Payment"/>
-        <activity android:name=".Exploreplace"/>
+        <activity android:name=".CotBasis"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Bunglow"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RK"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BHK"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Payment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Exploreplace"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".Nav_tenant"
