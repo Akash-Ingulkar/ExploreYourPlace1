@@ -85,7 +85,7 @@ public class postmyproperty extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.pp_submit:
-
+                Toast.makeText(getContext(), "Please Wait", Toast.LENGTH_SHORT).show();
                 uploadProperty();
                 break;
         }
