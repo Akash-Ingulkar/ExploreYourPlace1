@@ -1,5 +1,6 @@
 package akshay.saurav.chandan.exploreyourplace.ui.Pay_Rent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -14,8 +15,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import akshay.saurav.chandan.exploreyourplace.MainActivity;
+import akshay.saurav.chandan.exploreyourplace.Payment;
 import akshay.saurav.chandan.exploreyourplace.R;
+import akshay.saurav.chandan.exploreyourplace.constants.Constant;
 import akshay.saurav.chandan.exploreyourplace.model.PaYRenT;
+import akshay.saurav.chandan.exploreyourplace.services.RetrofitClient;
+import akshay.saurav.chandan.exploreyourplace.services.ServiceApiPR;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -52,6 +57,7 @@ public class payrent extends Fragment {
                 payRent();
 
 
+
             }
         });
 
@@ -60,20 +66,23 @@ public class payrent extends Fragment {
     }
 
     private void payRent() {
-        final String Tname = tenname_pr.getText().toString();
-        final String Tphone = tenphone_pr.getText().toString();
-        final String Temail = tenemail_pr.getText().toString();
-        final String Oname = ownname_pr.getText().toString();
-        final String Ophone = ownphone_pr.getText().toString();
-        Call<PaYRenT> call = MainActivity.serviceApiCRR.dopayment(Tname,Tphone,Temail,Oname,Ophone);
+         final String Tname = tenname_pr.getText().toString();
+         final String Tphone = tenphone_pr.getText().toString();
+         final String Temail = tenemail_pr.getText().toString();
+         final String Oname = ownname_pr.getText().toString();
+         final String Ophone = ownphone_pr.getText().toString();
+        ServiceApiPR retrofitService = RetrofitClient.getApiClient(Constant.baseUrl.BASE_URL).create(ServiceApiPR.class);
+        Call<PaYRenT> call = retrofitService.dopayment(Tname,Tphone,Temail,Oname,Ophone);
         call.enqueue(new Callback<PaYRenT>() {
             @Override
             public void onResponse(Call<PaYRenT> call, Response<PaYRenT> response) {
                 if (TextUtils.isEmpty(Tname)) {
                     Toast.makeText(getContext(), "Please Enter Tenent Name", Toast.LENGTH_SHORT).show();
-                } else if (TextUtils.isEmpty(Tphone)) {
+                }
+                else if (TextUtils.isEmpty(Tphone)) {
                     Toast.makeText(getContext(), "Please Enter Tenent Phone", Toast.LENGTH_SHORT).show();
-                }else if (TextUtils.isEmpty(Temail) ) {
+                }
+                else if (TextUtils.isEmpty(Temail) ) {
                     Toast.makeText(getContext(), "Please Enter Tenent Email", Toast.LENGTH_SHORT).show();
                 }
                 else if (TextUtils.isEmpty(Oname)) {
@@ -85,15 +94,17 @@ public class payrent extends Fragment {
                 else {
 
                     PaYRenT serverResponse = response.body();
-                    Toast.makeText(getContext(), "server response: " + serverResponse.getResponse(), Toast.LENGTH_SHORT).show();
+                    assert serverResponse != null;
+                   // Toast.makeText(getContext(), "server response: " + serverResponse.getResponse(), Toast.LENGTH_SHORT).show();
                     tenname_pr.setText("");
                     tenphone_pr.setText("");
                     tenemail_pr.setText("");
                     ownname_pr.setText("");
                     ownphone_pr.setText("");
+                    Intent intent=new Intent(getContext(), Payment.class);
+                    startActivity(intent);
 
-                    /*Intent intent=new Intent(getContext(),Payment.class);
-                    startActivity(intent);*/
+
                 }
             }
 

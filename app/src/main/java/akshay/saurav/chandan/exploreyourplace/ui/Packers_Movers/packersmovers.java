@@ -47,8 +47,7 @@ public class packersmovers extends Fragment {
         button_pm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.appPreference.showToast("button clicked");
-                //Toast.makeText(getContext(), "button clicked", Toast.LENGTH_SHORT).show();
+
                 packersmov();
                 Log.e("gen button", "clicked");
             }
@@ -89,7 +88,7 @@ public class packersmovers extends Fragment {
                                 city_pm.setText("");
                                 moving_from_pm.setText("");
                                 moving_to_pm.setText("");
-                                MainActivity.appPreference.showToast("Rent-Receipt Created Successfully");
+                                MainActivity.appPreference.showToast("Thank You");
                                 break;
                             case "error":
                                 MainActivity.appPreference.showToast("Oops! something went wrong.");

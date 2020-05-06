@@ -102,11 +102,12 @@ public class MainActivity extends AppCompatActivity implements MyInterface {
         appPreference.setDisplayEmail(email);
         appPreference.setCreDate(created_at);
 
-        getSupportFragmentManager()
+        /*getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_container, new HomeFragment())
                 .addToBackStack(null)
-                .commit();
+                .commit();*/
+        Intent intent=new Intent(MainActivity.this,Nav_tenant.class);
 
     }
 

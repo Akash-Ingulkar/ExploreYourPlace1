@@ -18,6 +18,9 @@
         <activity android:name=".Bunglow" />
         <activity android:name=".RK" />
         <activity android:name=".BHK" />
+        <activity android:name=".Payment"/>
+        <activity android:name=".Exploreplace"/>
+
         <activity
             android:name=".Nav_tenant"
             android:label="@string/title_activity_nav_tenant"

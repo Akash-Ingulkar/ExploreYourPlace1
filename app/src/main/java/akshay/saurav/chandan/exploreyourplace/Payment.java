@@ -1,4 +1,4 @@
-package akshay.saurav.chandan.exploreyourplace.ui.Pay_Rent;
+package akshay.saurav.chandan.exploreyourplace;
 
 import android.os.Bundle;
 
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import akshay.saurav.chandan.exploreyourplace.R;
 
-class Payment extends AppCompatActivity {
+public class Payment extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -51,8 +51,7 @@ public class rentreceipts extends Fragment {
         button_crr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.appPreference.showToast("button clicked");
-                //Toast.makeText(getContext(), "button clicked", Toast.LENGTH_SHORT).show();
+
                 createreceipt();
                 Log.e("gen button", "clicked");
             }

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Exploreplace extends AppCompatActivity implements View.OnClickListener {
 
     Button findmehome,managehouse;
+    private Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,11 @@ public class Exploreplace extends AppCompatActivity implements View.OnClickListe
         findmehome = findViewById(R.id.ep_button1);
         managehouse= findViewById(R.id.ep_button2);
 
-        findmehome.setOnClickListener(this);
-        managehouse.setOnClickListener(this);
+
+            findmehome.setOnClickListener(this);
+            managehouse.setOnClickListener(this);
+
+
 
     }
 
@@ -29,9 +33,11 @@ public class Exploreplace extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.ep_button1:
                 startActivity(new Intent(Exploreplace.this, MainActivity.class));
+               finish();
                 break;
             case R.id.ep_button2:
                 startActivity(new Intent(Exploreplace.this, MainActivity.class));
+                finish();
                 break;
         }
     }

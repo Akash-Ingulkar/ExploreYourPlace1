@@ -74,37 +74,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-       /* gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(),"You clicked"+homeWord[+position],Toast.LENGTH_SHORT).show();
-                switch (position){
-                    case 0:
-
-                        Intent rkintent=new Intent(getContext(), RK.class);
-                        startActivity(rkintent);
-                        break;
-
-                    case 1:
-                        Intent bhkintent=new Intent(getContext(), BHK.class);
-                        startActivity(bhkintent);
-                        break;
-
-                    case 2:
-                        Intent bunglowintent=new Intent(getContext(), Bunglow.class);
-                        startActivity(bunglowintent);
-                        break;
-
-
-                    case 3:
-                        Intent cotintent=new Intent(getContext(), CotBasis.class);
-                        startActivity(cotintent);
-                        break;
-
-                }
-            }
-        });
-*/
 
 
         return view;

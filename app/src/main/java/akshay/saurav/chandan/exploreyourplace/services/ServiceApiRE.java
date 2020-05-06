@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ServiceApiRE {
-    @GET("referandearn.php")
+    @GET("refer.php")
     Call<ReferEarn> refearn(@Query("name") String name, @Query("phone") String phone, @Query("address") String address);
 
 }
