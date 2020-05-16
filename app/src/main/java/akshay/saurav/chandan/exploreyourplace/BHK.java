@@ -1,6 +1,7 @@
 package akshay.saurav.chandan.exploreyourplace;
 
 import android.os.Bundle;
+import android.widget.AdapterView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;

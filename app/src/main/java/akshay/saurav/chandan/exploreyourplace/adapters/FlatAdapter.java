@@ -2,12 +2,15 @@ package akshay.saurav.chandan.exploreyourplace.adapters;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -17,11 +20,12 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import akshay.saurav.chandan.exploreyourplace.DetailS;
 import akshay.saurav.chandan.exploreyourplace.R;
 import akshay.saurav.chandan.exploreyourplace.model.FlatsModel;
 
 
-public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHolder> {
+public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHolder>  {
 
     private List<FlatsModel> regularFoods;
     private Context context;
@@ -43,6 +47,7 @@ public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHo
             regularRates=itemView.findViewById(R.id.tv2);
             regularTitle = itemView.findViewById(R.id.tv1);
             regularImage = itemView.findViewById(R.id.imageView3);
+            verticalLayout=itemView.findViewById(R.id.categoryak);
 
             //   regularPlus = itemView.findViewById(R.id.cd_sbi);
 
@@ -71,6 +76,18 @@ public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHo
                 .centerCrop()
                 .into(holder.regularImage);
 
+       holder.verticalLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailS.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("foodTitle", regularFoods.get(position).getPrice());
+                intent.putExtra("foodPrice", regularFoods.get(position).getLocation());
+                intent.putExtra("foodCalories", regularFoods.get(position).getDescription());
+                intent.putExtra("foodImage",regularFoods.get(position).getPath());
+                context.startActivity(intent);
+            }
+        });
 
 
     }

@@ -4,6 +4,8 @@
     package="akshay.saurav.chandan.exploreyourplace">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,19 +16,27 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".CotBasis"
+        <activity
+            android:name=".DetailS"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Bunglow"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".RK"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BHK"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Payment"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Exploreplace"
-            android:screenOrientation="portrait"/>
-
+        <activity
+            android:name=".CotBasis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Bunglow"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RK"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BHK"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Exploreplace"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Nav_tenant"
             android:label="@string/title_activity_nav_tenant"
