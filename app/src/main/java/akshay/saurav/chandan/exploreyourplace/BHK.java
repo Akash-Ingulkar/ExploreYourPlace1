@@ -52,9 +52,9 @@ public class BHK extends AppCompatActivity {
              /*   List<GeneralFood> popularFoods = response.body().getPopularFood();
                 recyclerViewHorizontal.setAdapter(new HorizontalAdapter(popularFoods, R.layout.recyclerview_horizontal, MainActivity.this));
 */
-                List<FlatsModel> regularFoods = response.body().getBHK();
+                List<FlatsModel> property = response.body().getBHK();
                 recyclerView.setNestedScrollingEnabled(false);
-                recyclerView.setAdapter(new FlatAdapter(regularFoods, R.layout.content_bhk, getApplicationContext()));
+                recyclerView.setAdapter(new FlatAdapter(property, R.layout.content_bhk, getApplicationContext()));
             }
 
             @Override

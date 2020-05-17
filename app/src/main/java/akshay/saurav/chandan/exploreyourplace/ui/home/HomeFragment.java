@@ -95,9 +95,9 @@ public class HomeFragment extends Fragment implements BaseSliderView.OnSliderCli
              /*   List<GeneralFood> popularFoods = response.body().getPopularFood();
                 recyclerViewHorizontal.setAdapter(new HorizontalAdapter(popularFoods, R.layout.recyclerview_horizontal, MainActivity.this));
 */
-                List<PMenu> regularFoods = response.body().getPMenu();
+                List<PMenu> property = response.body().getPMenu();
                 recyclerView.setNestedScrollingEnabled(false);
-                recyclerView.setAdapter(new CategoryAdapter(regularFoods, R.layout.data_category, getContext()));
+                recyclerView.setAdapter(new CategoryAdapter(property, R.layout.data_category, getContext()));
             }
 
             @Override

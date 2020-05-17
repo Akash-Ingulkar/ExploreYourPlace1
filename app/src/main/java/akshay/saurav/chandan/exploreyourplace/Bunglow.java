@@ -50,9 +50,9 @@ public class Bunglow extends AppCompatActivity {
              /*   List<GeneralFood> popularFoods = response.body().getPopularFood();
                 recyclerViewHorizontal.setAdapter(new HorizontalAdapter(popularFoods, R.layout.recyclerview_horizontal, MainActivity.this));
 */
-                List<FlatsModel> regularFoods = response.body().getBunglow();
+                List<FlatsModel> property = response.body().getBunglow();
                 recyclerView.setNestedScrollingEnabled(false);
-                recyclerView.setAdapter(new FlatAdapter(regularFoods, R.layout.content_bhk, getApplicationContext()));
+                recyclerView.setAdapter(new FlatAdapter(property, R.layout.content_bhk, getApplicationContext()));
             }
 
             @Override

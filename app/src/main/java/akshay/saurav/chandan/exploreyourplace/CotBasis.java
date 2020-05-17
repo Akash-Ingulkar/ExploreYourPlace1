@@ -48,9 +48,9 @@ public class CotBasis extends AppCompatActivity {
              /*   List<GeneralFood> popularFoods = response.body().getPopularFood();
                 recyclerViewHorizontal.setAdapter(new HorizontalAdapter(popularFoods, R.layout.recyclerview_horizontal, MainActivity.this));
 */
-                List<FlatsModel> regularFoods = response.body().getCotbasis();
+                List<FlatsModel> property = response.body().getCotbasis();
                 recyclerView.setNestedScrollingEnabled(false);
-                recyclerView.setAdapter(new FlatAdapter(regularFoods, R.layout.content_bhk, getApplicationContext()));
+                recyclerView.setAdapter(new FlatAdapter(property, R.layout.content_bhk, getApplicationContext()));
             }
 
             @Override

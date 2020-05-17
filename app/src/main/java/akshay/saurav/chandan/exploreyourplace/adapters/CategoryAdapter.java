@@ -28,7 +28,7 @@ import akshay.saurav.chandan.exploreyourplace.model.PMenu;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.VerticalViewHolder> {
 
-    private List<PMenu> regularFoods;
+    private List<PMenu> property;
     private Context context;
 
 
@@ -53,9 +53,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vertic
         }
     }
 
-    public CategoryAdapter(List<PMenu> regularFoods, int vertical_recyclerview, Context context){
+    public CategoryAdapter(List<PMenu> property, int vertical_recyclerview, Context context){
         this.context = context;
-        this.regularFoods = regularFoods;
+        this.property = property;
     }
 
     @NonNull
@@ -67,9 +67,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vertic
 
     @Override
     public void onBindViewHolder(@NonNull final CategoryAdapter.VerticalViewHolder holder, final int position) {
-        holder.regularTitle.setText(regularFoods.get(position).getPropertytype());
+        holder.regularTitle.setText(property.get(position).getPropertytype());
         Glide.with(context)
-                .load(regularFoods.get(position).getPropertyphoto())
+                .load(property.get(position).getPropertyphoto())
                 .centerCrop()
                 .into(holder.regularImage);
 
@@ -112,6 +112,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vertic
 
     @Override
     public int getItemCount() {
-        return regularFoods.size();
+        return property.size();
     }
 }

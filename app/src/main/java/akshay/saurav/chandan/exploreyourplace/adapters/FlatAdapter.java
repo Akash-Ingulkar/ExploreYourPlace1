@@ -17,6 +17,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ import akshay.saurav.chandan.exploreyourplace.model.FlatsModel;
 
 public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHolder>  {
 
-    private List<FlatsModel> regularFoods;
+    private List<FlatsModel> property;
     private Context context;
 
 
@@ -54,9 +55,9 @@ public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHo
         }
     }
 
-    public FlatAdapter(List<FlatsModel> regularFoods, int vertical_recyclerview, Context context){
+    public FlatAdapter(List<FlatsModel> property, int vertical_recyclerview, Context context){
         this.context = context;
-        this.regularFoods = regularFoods;
+        this.property = property;
     }
 
     @NonNull
@@ -67,24 +68,25 @@ public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final FlatAdapter.VerticalViewHolder holder, final int position) {
-        holder.regularTitle.setText(regularFoods.get(position).getPropertyType());
-        holder.regularRates.setText(regularFoods.get(position).getPrice());
-        holder.regularlocation.setText(regularFoods.get(position).getLocation());
+    public void onBindViewHolder(@NonNull final VerticalViewHolder holder, final int position) {
+        holder.regularTitle.setText(property.get(position).getPropertyType());
+        holder.regularRates.setText(property.get(position).getPrice());
+        holder.regularlocation.setText(property.get(position).getLocation());
         Glide.with(context)
-                .load(regularFoods.get(position).getPath())
+                .load(property.get(position).getPath())
                 .centerCrop()
                 .into(holder.regularImage);
+
 
        holder.verticalLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailS.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("foodTitle", regularFoods.get(position).getPrice());
-                intent.putExtra("foodPrice", regularFoods.get(position).getLocation());
-                intent.putExtra("foodCalories", regularFoods.get(position).getDescription());
-                intent.putExtra("foodImage",regularFoods.get(position).getPath());
+                intent.putExtra("propertyPrice", property.get(position).getPrice());
+                intent.putExtra("propertyLocation", property.get(position).getLocation());
+                intent.putExtra("propertyDescription", property.get(position).getDescription());
+                intent.putExtra("propertyImage",property.get(position).getPath());
                 context.startActivity(intent);
             }
         });
@@ -99,6 +101,6 @@ public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHo
 
     @Override
     public int getItemCount() {
-        return regularFoods.size();
+        return property.size();
     }
 }

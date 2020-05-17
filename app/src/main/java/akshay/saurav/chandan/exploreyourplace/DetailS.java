@@ -1,5 +1,6 @@
 package akshay.saurav.chandan.exploreyourplace;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -17,27 +18,35 @@ import akshay.saurav.chandan.exploreyourplace.model.FlatsModel;
 public class DetailS extends AppCompatActivity {
     FlatsModel mFood = new FlatsModel();
 
-    TextView foodTitle, foodPrice, foodCalories;
-    ImageView foodImage;
+    TextView propertyPrice, propertyLocation, propertyDescription;
+    ImageView propertyImage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detailsofproperty);
 
-        foodTitle = findViewById(R.id.dpprice);
-        foodPrice = findViewById(R.id.dplocation);
-        foodCalories = findViewById(R.id.dpaddress);
-        foodImage = findViewById(R.id.food_image);
+        propertyPrice = findViewById(R.id.dpprice);
+        propertyLocation = findViewById(R.id.dplocation);
+        propertyDescription = findViewById(R.id.dpaddress);
+        propertyImage = findViewById(R.id.food_image);
 
-        foodTitle.setText(getIntent().getStringExtra("foodTitle"));
-        foodPrice.setText(getIntent().getStringExtra("foodPrice"));
-        foodCalories.setText(getIntent().getStringExtra("foodCalories"));
+        propertyPrice.setText(getIntent().getStringExtra("propertyPrice"));
+        propertyLocation.setText(getIntent().getStringExtra("propertyLocation"));
+        propertyDescription.setText(getIntent().getStringExtra("propertyDescription"));
+
+        Glide.with(getApplicationContext())
+              .load(mFood.getPath())
+              .into(propertyImage);
 
 
-        mFood.setPrice(getIntent().getStringExtra("foodTitle"));
-        mFood.setLocation(getIntent().getStringExtra("foodPrice"));
-        mFood.setDescription(getIntent().getStringExtra("foodCalories"));
+
+
+
+        mFood.setPrice(getIntent().getStringExtra("propertyPrice"));
+        mFood.setLocation(getIntent().getStringExtra("propertyLocation"));
+        mFood.setDescription(getIntent().getStringExtra("propertyDescription"));
+       // mFood.setPath((getIntent().getStringExtra("foodImage")));
 
 
 
