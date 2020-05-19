@@ -146,10 +146,10 @@ public class LoginFragment extends Fragment {
                                 response.body().getName(),
                                 response.body().getEmail(),
                                 response.body().getCreatedAt());
-                        emailInput.setText("");
-                        passwordInput.setText("");
-                        Intent intent=new Intent(getContext(), Nav_tenant.class);
-                        startActivity(intent);
+                        /*emailInput.setText("");
+                        passwordInput.setText("");*/
+                        
+
                     } else if (response.body().getResponse().equals("login_failed")){
                         MainActivity.appPreference.showToast("Error. Login Failed");
                         emailInput.setText("");

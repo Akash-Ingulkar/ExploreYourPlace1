@@ -3,6 +3,7 @@ package akshay.saurav.chandan.exploreyourplace.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
+import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 import akshay.saurav.chandan.exploreyourplace.DetailS;
@@ -30,6 +32,7 @@ public class FlatAdapter extends RecyclerView.Adapter<FlatAdapter.VerticalViewHo
 
     private List<FlatsModel> property;
     private Context context;
+    Bitmap bitmap;
 
 
 

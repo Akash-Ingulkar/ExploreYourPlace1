@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import akshay.saurav.chandan.exploreyourplace.extras.AppPreference;
 import akshay.saurav.chandan.exploreyourplace.services.MyInterface;
+import akshay.saurav.chandan.exploreyourplace.services.ServiceApiEA;
 import akshay.saurav.chandan.exploreyourplace.services.ServiceApiL;
 import akshay.saurav.chandan.exploreyourplace.constants.Constant;
 import akshay.saurav.chandan.exploreyourplace.extras.AppPreference;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements MyInterface {
     public static ServiceApiMP serviceApiMP;
     public static ServiceApiPP serviceApiPP;
     public static ServiceApiRE serviceApiRE;
+    public static ServiceApiEA serviceApiEA;
 
 
     @Override
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements MyInterface {
         serviceApiMP = RetrofitClient.getApiClient(Constant.baseUrl.BASE_URL).create(ServiceApiMP.class);
         serviceApiPP = RetrofitClient.getApiClient(Constant.baseUrl.BASE_URL).create(ServiceApiPP.class);
         serviceApiRE = RetrofitClient.getApiClient(Constant.baseUrl.BASE_URL).create(ServiceApiRE.class);
+        serviceApiEA = RetrofitClient.getApiClient(Constant.baseUrl.BASE_URL).create(ServiceApiEA.class);
 
 
 
@@ -65,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements MyInterface {
                         .add(R.id.fragment_container, new ProfileFragment())
                         .commit();*/
                 Intent intent=new Intent(getApplicationContext(), Nav_tenant.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish();
                 startActivity(intent);
             } else {
                 // when get false
@@ -107,7 +112,11 @@ public class MainActivity extends AppCompatActivity implements MyInterface {
                 .replace(R.id.fragment_container, new HomeFragment())
                 .addToBackStack(null)
                 .commit();*/
-        Intent intent=new Intent(MainActivity.this,Nav_tenant.class);
+        //Intent intent=new Intent(MainActivity.this,Nav_tenant.class);
+        Intent intent=new Intent(getApplicationContext(), Nav_tenant.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        finish();
+        startActivity(intent);
 
     }
 

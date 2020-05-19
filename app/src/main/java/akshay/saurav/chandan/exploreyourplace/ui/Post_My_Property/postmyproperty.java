@@ -66,7 +66,7 @@ public class postmyproperty extends Fragment implements View.OnClickListener {
         description_pp = view.findViewById(R.id.pp_description);
         browse_pp = view.findViewById(R.id.pp_browse);
         submit_pp = view.findViewById(R.id.pp_submit);
-        preview_pp = view.findViewById(R.id.pp_preview);
+        //preview_pp = view.findViewById(R.id.pp_preview);
 
         browse_pp.setOnClickListener(this);
         submit_pp.setOnClickListener(this);
@@ -121,7 +121,7 @@ public class postmyproperty extends Fragment implements View.OnClickListener {
 
                     PostMyProperty serverResponse = response.body();
                     Toast.makeText(getContext(), "server response: " + serverResponse.getResponse(), Toast.LENGTH_SHORT).show();
-                    preview_pp.setImageResource(R.drawable.ic_launcher_background);
+//                    preview_pp.setImageResource(R.drawable.ic_launcher_background);
                     description_pp.setText("");
                     location_pp.setText("");
                     price_pp.setText("");
@@ -154,7 +154,7 @@ public class postmyproperty extends Fragment implements View.OnClickListener {
 
             try {
                 bitmap= MediaStore.Images.Media.getBitmap(getContext().getContentResolver(),path);
-                preview_pp.setImageBitmap(bitmap);
+               // preview_pp.setImageBitmap(bitmap);
 
             } catch (IOException e) {
                 e.printStackTrace();

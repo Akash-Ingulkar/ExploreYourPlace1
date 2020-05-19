@@ -16,9 +16,11 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+        <activity android:name=".BookForRent"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DetailS"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CotBasis"
             android:screenOrientation="portrait" />

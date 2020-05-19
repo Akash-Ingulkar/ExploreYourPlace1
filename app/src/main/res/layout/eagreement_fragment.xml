@@ -32,8 +32,8 @@
             android:textColor="#044E47"
             android:textSize="20sp"/>
 
-        <Button
-            android:id="@+id/button8"
+        <EditText
+            android:id="@+id/lawyer"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:background="@drawable/corner1"
@@ -109,7 +109,7 @@
                 android:text="Adhar Card" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/oaadhar"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -139,7 +139,7 @@
                 android:text="Adhar Card" />
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/tadharcard"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -179,7 +179,7 @@
                 android:text="PAN Card" />
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/opancard"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -209,7 +209,7 @@
                 android:text="PAN Card" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/tpancard"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -249,7 +249,7 @@
                 android:text="Photo" />
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/ophoto"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -279,7 +279,7 @@
                 android:text="Photo" />
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/tphoto"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -297,7 +297,7 @@
         >
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/uploaddoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
